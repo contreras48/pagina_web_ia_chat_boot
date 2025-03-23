@@ -1,0 +1,175 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-margin-top: 60px;
+}
+
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px;
+  border-width: 1px;
+  border-color: white;
+  border-style: solid;
+
+  &:hover {
+    border-radius: 25px;
+    border-color: #007bff;
+  }
+}
+
+.selected {
+  background-color: #007bff;
+  color: white;
+}
+
+/* navbar */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  width: 100%;
+  background-color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  z-index: 1000;
+}
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+.logo {
+  font-size: 1.44rem;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.btn {
+  border-radius: 25px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* main */
+main {
+  width: 100%;
+  padding-top: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* secciones */
+.hero {
+  height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+
+  &>.btn {
+    width: 200px;
+  }
+
+  &>ul {
+    list-style-type: disc;
+  }
+
+  & h2 {
+    font-size: 1.8rem;
+  }
+
+  & p {
+    font-size: 1.2rem;
+  }
+}
+
+.hero-content {
+  width: 45%;
+}
+
+.hero-img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* inicio */
+#inicio .hero-img {
+  border-radius: 70% 20% 30% 40%;
+}
+
+/* servicios */
+#servicios {
+  background-color: #ECEDF2;
+  border-radius: 20px;
+  padding: 20px;
+  padding-bottom: 20px;
+}
+
+#servicios .hero-img {
+  border-radius: 50% 20% 50% 20%;
+}
+
+/* nosotros */
+.img {
+  width: 450px;
+  height: 450px;
+  position: relative;
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20% 5% 20% 5%;
+  z-index: 0;
+}
+
+.front {
+  position: absolute;
+  top: 190px;
+  left: -50px;
+  width: 65%;
+  height: 65%;
+  border-radius: 10% 10% 10% 10%;
+  z-index: 1;
+  border: 9px solid white;
+}
